@@ -1,0 +1,175 @@
+<script>
+fallback.load({
+    // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    jQuery: {
+        urls: [
+            '//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js',
+            '/js/jquery.min.js'
+        ],
+        integrity: 'sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=',
+        crossorigin: 'anonymous'
+    },
+    // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous">
+    // jquery: {
+    //     urls: [
+    //         '//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js',
+    //         '/js/jquery.slim.min.js'
+    //     ],
+    //     integrity: 'sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=',
+    //     crossorigin: 'anonymous'
+    // }
+});
+fallback.ready([], function() {
+    fallback.load({
+        // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous">
+        'jQuery.easing.easeInBounce': {
+            urls: [
+                '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js',
+                '/js/jquery.easing.min.js'
+            ],
+            integrity: 'sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=',
+            crossorigin: 'anonymous'
+        },
+
+        // <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js" integrity="sha256-HfH85PYPD7XPxN3MmppGXnxsLZUrlu0dN/Kn4H7DA4E=" crossorigin="anonymous">
+        'jQuery().fitText': {
+            urls: [
+                '//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js',
+                '/js/jquery.fittext.min.js'
+            ],
+            integrity: 'sha256-HfH85PYPD7XPxN3MmppGXnxsLZUrlu0dN/Kn4H7DA4E=',
+            crossorigin: 'anonymous'
+        }
+    },
+    {
+        shim: {
+            'jQuery.easing.easeInBounce': ['jQuery'],
+            'jQuery().fitText': ['jQuery']
+        }
+    });
+    fallback.ready([], function() {
+        fallback.load({
+            // <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+            fonts_css: {
+                urls: [
+                    '//fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i',
+                    '/css/fonts.min.css',
+                    '/css/fonts.css'
+                ]
+            },
+
+            // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+            fontawesome_css: {
+                urls: [
+                    '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+                    '/font-awesome/css/font-awesome.min.css'
+                ],
+                integrity: 'sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=',
+                crossorigin: 'anonymous'
+            },
+
+            // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+            bootstrap_css: {
+                urls: [
+                    '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css',
+                    '/css/bootstrap.min.css'
+                ],
+                integrity: 'sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=',
+                crossorigin: 'anonymous'
+            },
+
+            // <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous">
+            'jQuery().scrollspy': {
+                urls: [
+                    '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js',
+                    '/js/bootstrap.min.js'
+                ],
+                integrity: 'sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=',
+                crossorigin: 'anonymous'
+            },
+
+            // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
+            animate_css: {
+                urls: [
+                    '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css',
+                    '/css/animate.min.css'
+                ],
+                integrity: 'sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=',
+                crossorigin: 'anonymous'
+            },
+
+            // <script src="https://cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.2/wow.min.js" integrity="sha256-gopJVYlh0S1SDzGgSVfVDKq3r27Lc8SzPE0FJ+c4EVk=" crossorigin="anonymous">
+            WOW: {
+                urls: [
+                    '//cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.2/wow.min.js',
+                    '/js/wow.min.js'
+                ],
+                integrity: 'sha256-gopJVYlh0S1SDzGgSVfVDKq3r27Lc8SzPE0FJ+c4EVk=',
+                crossorigin: 'anonymous'
+            }
+        }, {
+            shim: {
+                'jQuery().scrollspy': ['jQuery'],
+                'WOW': ['jQuery'],
+            }
+        });
+        fallback.ready([], function() {
+            fallback.load({
+                creative_css: {
+                    urls: [
+                        '/css/creative.min.css',
+                        '/css/creative.css'
+                    ]
+                },
+
+                creative_js: {
+                    urls: [
+                        '/js/creative.min.js'
+                    ]
+                },
+
+                modals_css: {
+                    urls: [
+                        '/css/modals.min.css',
+                        '/css/modals.css'
+                    ]
+                }
+            },
+            {
+                shim: {
+                    'creative_js': ['jQuery().scrollspy', 'jQuery.easing.easeInBounce', 'jQuery().fitText', 'WOW']
+                }
+            });
+        });
+    });
+});
+</script>
+{{ "<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->" | safeHTML }}
+{{ "<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->" | safeHTML }}
+{{ "<!--[if lt IE 9]>" | safeHTML }}
+<script>
+fallback.ready([], function() {
+    fallback.load({
+        // <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous">
+        'html5shiv': {
+            urls: [
+                '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js',
+                '/js/html5shiv.min.js'
+            ],
+            integrity: 'sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=',
+            crossorigin: 'anonymous'
+        },
+
+        // <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous">
+        'respond': {
+            urls: [
+                '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js',
+                '/js/respond.min.js'
+            ],
+            integrity: 'sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=',
+            crossorigin: 'anonymous'
+        },
+    });
+});
+</script>
+{{ "<![endif]-->" | safeHTML }}

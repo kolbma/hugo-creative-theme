@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}{{ .Site.Language }}{{ end }}">
     <head>
         {{ partial "head.html" . }}
     </head>
     <body id="page-top">
-        {{ if or .Site.Params.navigation.links.about .Site.Params.navigation.links.services .Site.Params.navigation.links.portfolio .Site.Params.navigation.links.contact }}
+        <div id="startupdiv"></div>
+        {{ if or .Site.Params.navigation.links.about .Site.Params.navigation.links.services .Site.Params.navigation.links.portfolio .Site.Params.navigation.links.contact .Site.Params.navigation.links.privacy }}
             {{ partial "nav.html" . }}
         {{ end }}
 
@@ -40,8 +41,10 @@
             {{ partial "modals.html" . }}
         {{ end }}
 
-        {{ partial "js.html" . }}
+        {{ if .Site.Params.privacy }}
+            {{ partial "privacy.html" . }}
+        {{ end }}
 
-        {{ template "_internal/google_analytics.html" . }}
+        {{ partial "js.html" . }}
     </body>
 </html>
