@@ -4,9 +4,11 @@
 {{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
 {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 <title>{{ .Site.Title }}</title>
-
+{{ range .Site.Params.meta }}
+<meta name="{{ .name }}" content="{{ .content }}">
+{{ end }}
 {{ "<!-- Favicon -->" | safeHTML }}
-<link rel="shortcut icon" href="{{ .Site.Params.favicon | absURL }}">
+<link rel="shortcut icon" href="{{ .Site.Params.favicon | relURL }}">
 <style>
 #startupdiv {
     position: fixed;

@@ -1,19 +1,18 @@
 {{- "<!-- fallback.js -->" | safeHTML }}
-<script src="{{ "js/fallback.min.js" | relURL }}"></script>
 {{ partial "js-fallback-loader.html" . }}
 {{ if .Site.Params.location }}
-<script src="//maps.googleapis.com/maps/api/js?key={{ .Site.Params.location.maps_api_key }}&v=3.exp"></script>
-<script src="{{ "js/hpneo.gmaps.js" | relURL }}"></script>
-<script src="{{ "js/gmaps.init.js" | relURL }}"></script>
+<script async src="//maps.googleapis.com/maps/api/js?key={{ .Site.Params.location.maps_api_key }}&v=3.exp"></script>
+<script async src="{{ "js/hpneo.gmaps.js" | relURL }}"></script>
+<script async src="{{ "js/gmaps.init.js" | relURL }}"></script>
 {{ end }}
-<script>
+<!-- <script>
     window.addEventListener('load', function() {
         var chours = new Date().getHours();
         if (chours > 20 || chours < 6) {
-            $('header').css('background-image', 'url(../img/header1.jpg)');
+            $('header').css('background-image', 'url(img/header1.jpg)');
         } else {
-            $('header').css('background-image', 'url(../img/header2.jpg)');
+            $('header').css('background-image', 'url(img/header2.jpg)');
         }
         $('#startupdiv').fadeOut(200);
     });
-</script>
+</script> -->

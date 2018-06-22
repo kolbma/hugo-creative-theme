@@ -76,12 +76,8 @@ p {
     color: rgba(255,255,255,.7);
 }
 
-#privacy h2.section-heading {
-    margin-top: 150px;
-}
-
-#privacy h2:first-of-type.section-heading {
-    margin-top: 0px;
+#privacy > div.container > div:last-child {
+    margin-top: 50px;
 }
 
 section {
@@ -198,7 +194,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header2.jpg);
+    background-image: url(../img/header2s.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
