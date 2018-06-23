@@ -1,0 +1,29 @@
+<script>
+    if (!emailDecode) {
+        var emailDecode = function(node) {
+            var href;
+            if (typeof (node) === 'string') {
+                href = node;
+            } else {
+                href = node.getAttribute('href');
+            }
+            if (href.startsWith('mailto:')) {
+                href = href.substr(7);
+            }
+            if (href.indexOf('@') !== -1) {
+                return;
+            }
+            var email = window.atob(href);
+            if (typeof (node) !== 'string') {
+                node.setAttribute('href', 'mailto:' + email);
+                node.textContent = email;
+            }
+            return email;
+        }
+        window.addEventListener('load', function() {
+            for (var element of document.getElementsByClassName('email-decode')) {
+                emailDecode(element);
+            }
+        });
+    }
+</script>
