@@ -496,3 +496,21 @@ body {
     overflow: visible;
     position: relative;
 }
+
+.npm-logo {
+    width: 50px;
+}
+
+.flattr-logo {
+    width: 100px;
+}
+
+.fa::before {
+    color: #333;
+}
+.fa-facebook-square::before {
+    color: #3b5998;
+}
+.fa-github::before {
+    color: #6a737d;
+}

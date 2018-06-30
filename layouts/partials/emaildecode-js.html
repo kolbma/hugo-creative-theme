@@ -16,7 +16,9 @@
             var email = window.atob(href);
             if (typeof (node) !== 'string') {
                 node.setAttribute('href', 'mailto:' + email);
-                node.textContent = email;
+                if (node.textContent === href) {
+                    node.textContent = email;
+                }
             }
             return email;
         }

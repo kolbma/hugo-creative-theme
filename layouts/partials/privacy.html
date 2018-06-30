@@ -11,7 +11,7 @@
                     <hr class="light">
                 {{ end }}
                 {{ with .Site.Params.privacy.description }}
-                    <p class="text-faded">{{ . | markdownify }}</p>
+                    <div class="text-faded">{{ . | markdownify }}</div>
                 {{ end }}
             </div>
         </div>
@@ -50,7 +50,7 @@
                 <hr class="light">
             {{ end }}
             {{ with .Site.Params.privacy.subdescription }}
-                <p class="text-faded">{{ . | markdownify }}</p>
+                <div class="text-faded">{{ . | markdownify }}</div>
             {{ end }}
             </div>
         </div>
