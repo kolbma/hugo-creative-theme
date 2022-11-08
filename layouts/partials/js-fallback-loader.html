@@ -6,7 +6,7 @@ fallback.load({
     // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
     bootstrap_css: {
         urls: [
-            '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css',
+            '//gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css',
             'css/bootstrap.min.css'
         ],
         integrity: 'sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=',
@@ -34,13 +34,13 @@ fallback.load({
     // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     jQuery: {
         urls: [
-            '//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
+            '//gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
             'js/jquery.min.js'
         ],
         integrity: 'sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==',
         crossorigin: 'anonymous'
     },
-    // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g==" crossorigin="anonymous"></script>
+    // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g==" crossorigin="anonymous">
     // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous">
     // jquery: {
     //     urls: [
@@ -56,7 +56,7 @@ fallback.ready([], function() {
         // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous">
         'jQuery.easing.easeInBounce': {
             urls: [
-                '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js',
+                '//gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js',
                 'js/jquery.easing.min.js'
             ],
             integrity: 'sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=',
@@ -66,7 +66,7 @@ fallback.ready([], function() {
         // <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js" integrity="sha256-HfH85PYPD7XPxN3MmppGXnxsLZUrlu0dN/Kn4H7DA4E=" crossorigin="anonymous">
         'jQuery().fitText': {
             urls: [
-                '//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js',
+                '//gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js',
                 'js/jquery.fittext.min.js'
             ],
             integrity: 'sha256-HfH85PYPD7XPxN3MmppGXnxsLZUrlu0dN/Kn4H7DA4E=',
@@ -81,19 +81,20 @@ fallback.ready([], function() {
     });
     fallback.ready([], function() {
         fallback.load({
-            // <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+            // <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
             fonts_css: {
                 urls: [
-                    '//fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&.css',
+                    '//gfont.n4v.eu/https/fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap&.css',
                     'css/fonts.min.css',
                     'css/fonts.css'
-                ]
+                ],
+                crossorigin: 'anonymous'
             },
 
             // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
             fontawesome_css: {
                 urls: [
-                    '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+                    '//gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
                     '/font-awesome/css/font-awesome.min.css'
                 ],
                 integrity: 'sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=',
@@ -103,7 +104,7 @@ fallback.ready([], function() {
             // <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous">
             'jQuery().scrollspy': {
                 urls: [
-                    '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js',
+                    '//gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js',
                     'js/bootstrap.min.js'
                 ],
                 integrity: 'sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=',
@@ -113,7 +114,7 @@ fallback.ready([], function() {
             // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
             animate_css: {
                 urls: [
-                    '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css',
+                    '//gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css',
                     'css/animate.min.css'
                 ],
                 integrity: 'sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=',
@@ -123,7 +124,7 @@ fallback.ready([], function() {
             // <script src="https://cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.2/wow.min.js" integrity="sha256-gopJVYlh0S1SDzGgSVfVDKq3r27Lc8SzPE0FJ+c4EVk=" crossorigin="anonymous">
             WOW: {
                 urls: [
-                    '//cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.2/wow.min.js',
+                    '//gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.2/wow.min.js',
                     'js/wow.min.js'
                 ],
                 integrity: 'sha256-gopJVYlh0S1SDzGgSVfVDKq3r27Lc8SzPE0FJ+c4EVk=',
@@ -172,7 +173,7 @@ fallback.ready([], function() {
         // <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous">
         'html5shiv': {
             urls: [
-                '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js',
+                '//gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js',
                 'js/html5shiv.min.js'
             ],
             integrity: 'sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=',
@@ -181,7 +182,7 @@ fallback.ready([], function() {
         // <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous">
         'respond': {
             urls: [
-                '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js',
+                '//gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js',
                 'js/respond.min.js'
             ],
             integrity: 'sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=',
@@ -194,11 +195,11 @@ document.body.appendChild(fbscript2);
 </script>
 {{ "<![endif]-->" | safeHTML }}
 <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/creative.min.css" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
+    <link href="https://gfont.n4v.eu/https/fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://gfont.n4v.eu/https/cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/modals.min.css" crossorigin="anonymous" />
     <style>#startupdiv { display: none; }</style>
 </noscript>
