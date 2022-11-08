@@ -64,10 +64,12 @@
         <div class="row">
             {{ if .Site.Params.contact.github }}
                 <div class="
-                {{ if .Site.Params.contact.npmjs }}
-                    col-lg-3 col-lg-offset-3 col-sm-4 col-sm-offset-2
+                {{ if and .Site.Params.contact.npmjs .Site.Params.contact.blog }}
+                    col-lg-2 col-lg-offset-3 col-sm-4
+                {{ else if or .Site.Params.contact.npmjs .Site.Params.contact.blog }}
+                    col-lg-4 col-lg-offset-2 col-sm-3 col-sm-offset-3
                 {{ else }}
-                    col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-4
+                    col-lg-8 col-lg-offset-2
                 {{ end }}
                 text-center">
                     <a href="https://github.com/{{ .Site.Params.contact.github }}" rel="nofollow"><i class="fa fa-github fa-3x wow bounceIn"></i></a>
@@ -76,10 +78,14 @@
             {{ end }}
             {{ if .Site.Params.contact.npmjs }}
                 <div class="
-                {{ if .Site.Params.contact.github }}
-                    col-lg-3 col-sm-4
+                {{ if and .Site.Params.contact.github .Site.Params.contact.blog }}
+                    col-lg-2 col-sm-4
+                {{ else if .Site.Params.contact.github }}
+                    col-lg-4 col-sm-3
+                {{ else if .Site.Params.contact.blog }}
+                    col-lg-4 col-lg-offset-2 col-sm-3 col-sm-offset-3
                 {{ else }}
-                    col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-4
+                    col-lg-8 col-lg-offset-2
                 {{ end }}
                 text-center">
                 <i class="wow bounceIn" data-wow-delay=".1s">
@@ -92,9 +98,23 @@
                 <p><a href="https://www.npmjs.com/~{{ .Site.Params.contact.npmjs }}" rel="nofollow">npm Packages</a></p>
                 </div>
             {{ end }}
+            {{ if .Site.Params.contact.blog }}
+                <div class="
+                {{ if and .Site.Params.contact.github .Site.Params.contact.npmjs }}
+                    col-lg-2 col-sm-4
+                {{ else if or .Site.Params.contact.github .Site.Params.contact.npmjs }}
+                    col-lg-4 col-sm-3
+                {{ else }}
+                    col-lg-8 col-lg-offset-2
+                {{ end }}
+                text-center">
+                    <a href="{{ .Site.Params.contact.blog }}"><i class="fa fa-rss fa-3x wow bounceIn"></i></a>
+                    <p><a href="{{ .Site.Params.contact.blog }}">Blog</a></p>
+                </div>
+            {{ end }}
         </div>
         <div class="row">
-            {{ if .Site.Params.contact.blog }}
+            {{ if .Site.Params.contact.buymeacoffee }}
                 <div class="
                 {{ if .Site.Params.contact.flattr }}
                     col-lg-3 col-lg-offset-3 col-sm-4 col-sm-offset-2
@@ -102,13 +122,15 @@
                     col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-4
                 {{ end }}
                 text-center">
-                    <a href="{{ .Site.Params.contact.blog }}"><i class="fa fa-rss fa-3x wow bounceIn"></i></a>
-                    <p><a href="{{ .Site.Params.contact.blog }}">Blog</a></p>
+                <i class="wow bounceIn" data-wow-delay=".1s">
+                    <a href="https://www.buymeacoffee.com/{{ .Site.Params.contact.buymeacoffee }}" target="_blank" rel="nofollow"><img src="https://gfont.n4v.eu/https/cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+                </i>
+                <p><a href="https://www.buymeacoffee.com/{{ .Site.Params.contact.buymeacoffee }}" target="_blank" rel="nofollow"></a></p>
                 </div>
             {{ end }}
             {{ if .Site.Params.contact.flattr }}
                 <div class="
-                {{ if .Site.Params.contact.blog }}
+                {{ if .Site.Params.contact.buymeacoffee }}
                     col-lg-3 col-sm-4
                 {{ else }}
                     col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-4
