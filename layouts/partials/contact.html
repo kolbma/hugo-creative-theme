@@ -64,9 +64,9 @@
         <div class="row">
             {{ if .Site.Params.contact.github }}
                 <div class="
-                {{ if and .Site.Params.contact.npmjs .Site.Params.contact.blog }}
+                {{ if and .Site.Params.contact.buymeacoffee .Site.Params.contact.blog }}
                     col-lg-2 col-lg-offset-3 col-sm-4
-                {{ else if or .Site.Params.contact.npmjs .Site.Params.contact.blog }}
+                {{ else if or .Site.Params.contact.buymeacoffee .Site.Params.contact.blog }}
                     col-lg-4 col-lg-offset-2 col-sm-3 col-sm-offset-3
                 {{ else }}
                     col-lg-8 col-lg-offset-2
@@ -76,7 +76,7 @@
                     <p><a href="https://github.com/{{ .Site.Params.contact.github }}" rel="nofollow">Github</a></p>
                 </div>
             {{ end }}
-            {{ if .Site.Params.contact.npmjs }}
+            {{ if .Site.Params.contact.buymeacoffee }}
                 <div class="
                 {{ if and .Site.Params.contact.github .Site.Params.contact.blog }}
                     col-lg-2 col-sm-4
@@ -88,21 +88,17 @@
                     col-lg-8 col-lg-offset-2
                 {{ end }}
                 text-center">
-                <i class="wow bounceIn" data-wow-delay=".1s">
-                    <a href="https://www.npmjs.com/~{{ .Site.Params.contact.npmjs }}" rel="nofollow">
-                    <svg viewBox="0 0 18 7" class="npm-logo">
-                        <path fill="#CB3837" d="M0 0v6h5v1h4V6h9V0"></path><path fill="#FFF" d="M1 1v4h2V2h1v3h1V1h1v5h2V2h1v2H8v1h2V1h1v4h2V2h1v3h1V2h1v3h1V1"></path>
-                    </svg>
-                    </a>
-                </i>
-                <p><a href="https://www.npmjs.com/~{{ .Site.Params.contact.npmjs }}" rel="nofollow">npm Packages</a></p>
+                    <div class="wow bounceIn">
+                    <a href="https://www.buymeacoffee.com/{{ .Site.Params.contact.buymeacoffee }}" target="_blank" rel="nofollow"><img src="img/bmc-brand-logo.svg" alt="Buy Me A Coffee"></a>
+                    </div>
+                    <p><a href="https://www.buymeacoffee.com/{{ .Site.Params.contact.buymeacoffee }}" target="_blank" rel="nofollow"></a></p>
                 </div>
             {{ end }}
             {{ if .Site.Params.contact.blog }}
                 <div class="
-                {{ if and .Site.Params.contact.github .Site.Params.contact.npmjs }}
+                {{ if and .Site.Params.contact.github .Site.Params.contact.buymeacoffee }}
                     col-lg-2 col-sm-4
-                {{ else if or .Site.Params.contact.github .Site.Params.contact.npmjs }}
+                {{ else if or .Site.Params.contact.github .Site.Params.contact.buymeacoffee }}
                     col-lg-4 col-sm-3
                 {{ else }}
                     col-lg-8 col-lg-offset-2
@@ -114,7 +110,7 @@
             {{ end }}
         </div>
         <div class="row">
-            {{ if .Site.Params.contact.buymeacoffee }}
+            {{ if .Site.Params.contact.npmjs }}
                 <div class="
                 {{ if .Site.Params.contact.flattr }}
                     col-lg-3 col-lg-offset-3 col-sm-4 col-sm-offset-2
@@ -122,26 +118,30 @@
                     col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-4
                 {{ end }}
                 text-center">
-                <i class="wow bounceIn" data-wow-delay=".1s">
-                    <a href="https://www.buymeacoffee.com/{{ .Site.Params.contact.buymeacoffee }}" target="_blank" rel="nofollow"><img src="https://gfont.n4v.eu/https/cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-                </i>
-                <p><a href="https://www.buymeacoffee.com/{{ .Site.Params.contact.buymeacoffee }}" target="_blank" rel="nofollow"></a></p>
+                    <div class="wow bounceIn">
+                    <a href="https://www.npmjs.com/~{{ .Site.Params.contact.npmjs }}" rel="nofollow">
+                    <svg viewBox="0 0 18 7" class="npm-logo">
+                        <path fill="#CB3837" d="M0 0v6h5v1h4V6h9V0"></path><path fill="#FFF" d="M1 1v4h2V2h1v3h1V1h1v5h2V2h1v2H8v1h2V1h1v4h2V2h1v3h1V2h1v3h1V1"></path>
+                    </svg>
+                    </a>
+                    </div>
+                    <p><a href="https://www.npmjs.com/~{{ .Site.Params.contact.npmjs }}" rel="nofollow">npm Packages</a></p>
                 </div>
             {{ end }}
             {{ if .Site.Params.contact.flattr }}
                 <div class="
-                {{ if .Site.Params.contact.buymeacoffee }}
+                {{ if .Site.Params.contact.npmjs }}
                     col-lg-3 col-sm-4
                 {{ else }}
                     col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-4
                 {{ end }}
                 text-center">
-                <i class="wow bounceIn" data-wow-delay=".1s">
+                    <div class="wow bounceIn">
                     <a href="https://flattr.com/@{{ .Site.Params.contact.flattr }}" rel="nofollow">
-                        <svg data-v-faf9bff2="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1901 500" class="flattr-logo"><path data-v-faf9bff2="" d="M39.71,250C39.71,134,134,39.71,250,39.71c1,0,83.39,0,113.64.05L302.7,100.7l28,28L456.31,0H374L250,0A250,250,0,0,0,0,250L0,444.4l39.78-36.64v-2C39.74,400.67,39.71,251.5,39.71,250Z"></path> <path data-v-faf9bff2="" d="M500,55.59,460.21,92.24v2c0,5.09.07,154.26.07,155.76,0,116-94.34,210.29-210.29,210.29-1,0-83.39,0-113.64-.05L197.3,399.3l-28-28L43.69,500H126l124,0A250,250,0,0,0,500,250Z"></path> <path data-v-faf9bff2="" d="M731.5,69.28H929.82v33.24H768.48V244H906.76v33.24H768.48V446.08h-37Z"></path> <path data-v-faf9bff2="" d="M993.61,69.28h36.45v305c0,35.38,16.08,40.74,30,40.74a83.24,83.24,0,0,0,9.08-.53v32.68a92.22,92.22,0,0,1-13.4,1.07c-22.51,0-62.18-7-62.18-65.94Z"></path> <path data-v-faf9bff2="" d="M1271.78,279.37h15v-7c0-52-28.41-69.68-67-69.68-44.5,0-76.1,25.72-76.1,25.72l-17.16-27.87S1161.92,170,1222.48,170c64.86,0,100.77,35.91,100.77,103.48V446.1h-34.82V416.6a213.07,213.07,0,0,1,1.07-22.51h-1.07s-22.51,58.42-90,58.42c-45,0-91.66-26.27-91.66-79.88C1106.71,281.48,1225.17,279.37,1271.78,279.37Zm-67.53,142c51.45,0,82.55-53.59,82.55-100.23v-11.8h-15.54c-42.34,0-127.08,1.62-127.08,61.11C1144.23,395.69,1164.06,421.41,1204.25,421.41Z"></path> <path data-v-faf9bff2="" d="M1416,210.24h-35.38V179.69h35.91V102h35.91v77.72H1520v30.55h-67.53v134c0,63.25,40.19,71.29,60.56,71.29a62.71,62.71,0,0,0,12.33-1.07v32.68a95.87,95.87,0,0,1-15.54,1.07c-31.08,0-93.8-10.18-93.8-100.23Z"></path> <path data-v-faf9bff2="" d="M1595.56,210.24h-35.38V179.69h35.91V102H1632v77.72h67.53v30.55H1632v134c0,63.25,40.19,71.29,60.56,71.29a62.71,62.71,0,0,0,12.33-1.07v32.68a95.87,95.87,0,0,1-15.54,1.07c-31.08,0-93.8-10.18-93.8-100.23Z"></path> <path data-v-faf9bff2="" d="M1764.94,176.48h35.91v47.71c0,11.8-1.07,21.44-1.07,21.44h1.07c12.85-40.74,42.88-71.82,85.22-71.82a73,73,0,0,1,14.52,1.6v35.91a92.3,92.3,0,0,0-13.4-1.07c-38.12,0-66.46,30-78.26,69.68a177.91,177.91,0,0,0-7.5,52.52V446.06H1765Z"></path></svg>
+                        <svg data-v-faf9bff2="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1901 500" class="flattr-logo" style="height: 40px"><path data-v-faf9bff2="" d="M39.71,250C39.71,134,134,39.71,250,39.71c1,0,83.39,0,113.64.05L302.7,100.7l28,28L456.31,0H374L250,0A250,250,0,0,0,0,250L0,444.4l39.78-36.64v-2C39.74,400.67,39.71,251.5,39.71,250Z"></path> <path data-v-faf9bff2="" d="M500,55.59,460.21,92.24v2c0,5.09.07,154.26.07,155.76,0,116-94.34,210.29-210.29,210.29-1,0-83.39,0-113.64-.05L197.3,399.3l-28-28L43.69,500H126l124,0A250,250,0,0,0,500,250Z"></path> <path data-v-faf9bff2="" d="M731.5,69.28H929.82v33.24H768.48V244H906.76v33.24H768.48V446.08h-37Z"></path> <path data-v-faf9bff2="" d="M993.61,69.28h36.45v305c0,35.38,16.08,40.74,30,40.74a83.24,83.24,0,0,0,9.08-.53v32.68a92.22,92.22,0,0,1-13.4,1.07c-22.51,0-62.18-7-62.18-65.94Z"></path> <path data-v-faf9bff2="" d="M1271.78,279.37h15v-7c0-52-28.41-69.68-67-69.68-44.5,0-76.1,25.72-76.1,25.72l-17.16-27.87S1161.92,170,1222.48,170c64.86,0,100.77,35.91,100.77,103.48V446.1h-34.82V416.6a213.07,213.07,0,0,1,1.07-22.51h-1.07s-22.51,58.42-90,58.42c-45,0-91.66-26.27-91.66-79.88C1106.71,281.48,1225.17,279.37,1271.78,279.37Zm-67.53,142c51.45,0,82.55-53.59,82.55-100.23v-11.8h-15.54c-42.34,0-127.08,1.62-127.08,61.11C1144.23,395.69,1164.06,421.41,1204.25,421.41Z"></path> <path data-v-faf9bff2="" d="M1416,210.24h-35.38V179.69h35.91V102h35.91v77.72H1520v30.55h-67.53v134c0,63.25,40.19,71.29,60.56,71.29a62.71,62.71,0,0,0,12.33-1.07v32.68a95.87,95.87,0,0,1-15.54,1.07c-31.08,0-93.8-10.18-93.8-100.23Z"></path> <path data-v-faf9bff2="" d="M1595.56,210.24h-35.38V179.69h35.91V102H1632v77.72h67.53v30.55H1632v134c0,63.25,40.19,71.29,60.56,71.29a62.71,62.71,0,0,0,12.33-1.07v32.68a95.87,95.87,0,0,1-15.54,1.07c-31.08,0-93.8-10.18-93.8-100.23Z"></path> <path data-v-faf9bff2="" d="M1764.94,176.48h35.91v47.71c0,11.8-1.07,21.44-1.07,21.44h1.07c12.85-40.74,42.88-71.82,85.22-71.82a73,73,0,0,1,14.52,1.6v35.91a92.3,92.3,0,0,0-13.4-1.07c-38.12,0-66.46,30-78.26,69.68a177.91,177.91,0,0,0-7.5,52.52V446.06H1765Z"></path></svg>
                     </a>
-                </i>
-                <p><a href="https://flattr.com/@{{ .Site.Params.contact.flattr }}" rel="nofollow"></a></p>
+                    </div>
+                    <p><a href="https://flattr.com/@{{ .Site.Params.contact.flattr }}" rel="nofollow"></a></p>
                 </div>
             {{ end }}
         </div>
